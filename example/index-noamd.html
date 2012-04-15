@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>HTTP</title>
+	</head>
+<body>
+	<pre id="output"></pre>
+
+<script src="../lib/http.js"></script>
+<script>
+
+var method = 'GET';
+var url = 'https://api.github.com/gists/public';
+var headers = {'Accept': 'application/json'};
+var body = '';
+
+HTTP.request(method, url, headers, body, function(err, status, headers, body) {
+	console.log('Error:');
+	console.log(err);
+
+	console.log('HTTP status code:');
+	console.log(status);
+
+	console.log('Response headers:');
+	console.log(headers);
+
+	var output = document.getElementById('output');
+	output.insertAdjacentHTML('beforebegin', body);
+});
+
+</script>
+
+</body>
+</html>

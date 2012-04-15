@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- This example uses RequireJS: http://requirejs.org/ -->
+		<script src="require.js"></script>
+		<script>
+
+// Configure the module locations.
+require.config({
+	paths: {
+		'HTTP': '/lib/http'
+	}
+});
+
+// Include the HTTP module.
+require(['HTTP'], function(HTTP) {
+
+	var method = 'GET';
+	var url = 'https://api.github.com/gists/public';
+	var headers = {'Accept': 'application/json'};
+	var body = '';
+
+	HTTP.request(method, url, headers, body, function(err, status, headers, body) {
+		console.log('Error:');
+		console.log(err);
+
+		console.log('HTTP status code:');
+		console.log(status);
+
+		console.log('Response headers:');
+		console.log(headers);
+
+		var output = document.getElementById('output');
+		output.insertAdjacentHTML('beforebegin', body);
+	});
+
+});
+
+		</script>
+	</head>
+	<body>
+		<pre id="output"></pre>
+	</body>
+</html>

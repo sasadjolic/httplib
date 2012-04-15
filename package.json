@@ -1,0 +1,39 @@
+{
+	"name"           : "HTTP",
+	"description"    : "Cross-browser JavaScript wrapper around XMLHTTPRequest",
+	"version"        : "0.0.1",
+	"keywords"       : ["util", "browser", "HTTP", "CORS", "XMLHTTPRequest"],
+	"homepage"       : "http://github.com/SDA/http",
+	"author"         : "Sasa Djolic <sasa.djolic@sdaworld.com>",
+	"maintainers"    : [{
+		"name"       : "Sasa Djolic",
+		"email"      : "sasa.djolic@sdaworld.com",
+		"web"        : "http://www.sasadjolic.com"
+	}],
+	"contributors"   : [{
+		"name"       : "Sasa Djolic",
+		"email"      : "sasa.djolic@sdaworld.com",
+		"web"        : "http://www.sasadjolic.com"
+	}],
+	"bugs"           : { "url": "http://github.com/SDA/http/issues" },
+	"licenses"       : [{ "type": "MIT", "url": "https://raw.github.com/SDA/http/master/LICENSE" }],
+	"repositories"   : [{ "type": "git", "url": "http://github.com/SDA/http" }],
+	"scripts"        : {
+		"build"      : "node build/build.js",
+		"test"       : "node test/index.js"
+	},
+	"directories"    : {
+		"lib"        : "lib"
+	},
+	"devDependencies": {
+		"fs-extra"   : ">= 0.0.4",
+		"node-static": "0.5.x",
+		"qunit"      : "0.4.x",
+		"seq"        : "0.3.x"
+	},
+	"dependencies"   : {
+	},
+	"engines"        : {
+		"node"       : "0.6.x"
+	}
+}
