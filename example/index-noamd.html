@@ -5,10 +5,13 @@
 		<title>HTTP</title>
 	</head>
 <body>
-	<pre id="output"></pre>
+	<button id="send">Send Request</button>
+	<div><pre id="output"></pre></div>
 
 <script src="../lib/http.js"></script>
 <script>
+
+HTTP.options({ cache: { enabled: true, size: 100 * 1024, age: 5000 } });
 
 var method = 'GET';
 var url = 'https://api.github.com/gists/public';
@@ -16,17 +19,21 @@ var headers = {'Accept': 'application/json'};
 var body = '';
 
 HTTP.request(method, url, headers, body, function(err, status, headers, body) {
-	console.log('Error:');
-	console.log(err);
-
-	console.log('HTTP status code:');
-	console.log(status);
-
-	console.log('Response headers:');
-	console.log(headers);
-
+	if (err) console.log(err); else console.log('[' + status + '] ' + method + ' ' + url);
 	var output = document.getElementById('output');
-	output.insertAdjacentHTML('beforebegin', body);
+	output.insertAdjacentHTML('beforebegin', '<p>' + body.substr(0, 40) + (body.length > 40 ? '...' : '') + '</p>');
+});
+
+var button = document.getElementById('send');
+button.addEventListener('click', function() {
+	// This time, the response will be retrieved from the cache if the button is
+	// pushed before the cached item expires. Since github doesn't set any expiry
+	// dates, the default of 5 seconds set above in HTTP.options will be used.
+	HTTP.request(method, url, headers, body, function(err, status, headers, body) {
+		if (err) console.log(err); else console.log('[' + status + '] ' + method + ' ' + url);
+		var output = document.getElementById('output');
+		output.insertAdjacentHTML('beforebegin', '<p>' + body.substr(0, 40) + (body.length > 40 ? '...' : '') + '</p>');
+	});
 });
 
 </script>

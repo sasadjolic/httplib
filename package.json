@@ -1,7 +1,7 @@
 {
 	"name"           : "HTTP",
 	"description"    : "Cross-browser JavaScript wrapper around XMLHTTPRequest",
-	"version"        : "0.0.1",
+	"version"        : "0.1.0",
 	"keywords"       : ["util", "browser", "HTTP", "CORS", "XMLHTTPRequest"],
 	"homepage"       : "http://github.com/SDA/http",
 	"author"         : "Sasa Djolic <sasa.djolic@sdaworld.com>",
