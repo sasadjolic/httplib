@@ -15,7 +15,7 @@ seq()
 		build.version = '' + version;
 
 		// Copy raw JS, if required.
-		fs.copyFileSync('lib/http.js', 'dist/http-' + build.version + '.js');
+		fs.copySync('lib/http.js', 'dist/http-' + build.version + '.js');
 
 		// Minify JS.
 		exec('java -jar build/closure/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS --js lib/http.js --js_output_file dist/http-' + build.version + '.min.js', this);
