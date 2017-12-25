@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/SDA/http.png)](http://travis-ci.org/SDA/http)
+[![Build Status](https://secure.travis-ci.org/sasadjolic/httplib.png)](http://travis-ci.org/sasadjolic/httplib)
 
 # HTTP
 
@@ -8,7 +8,7 @@ Cross-browser JavaScript wrapper around XMLHTTPRequest
 
 (The MIT License)
 
-Copyright (c) 2012 Sasa Djolic, SDA Software Associates Inc.
+Copyright (c) 2012-2017 Sasa Djolic
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
