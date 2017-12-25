@@ -3,13 +3,13 @@
 	"description"    : "Cross-browser JavaScript wrapper around XMLHTTPRequest",
 	"version"        : "1.0.0",
 	"keywords"       : ["util", "browser", "HTTP", "CORS", "XMLHTTPRequest", "REST", "API"],
-	"homepage"       : "https://github.com/sasadjolic/http",
+	"homepage"       : "https://github.com/sasadjolic/httplib",
 	"author"         : "Sasa Djolic <sasa.djolic@gmail.com> (https://www.linkedin.com/in/sasadjolic/)",
 	"maintainers"    : [ "Sasa Djolic <sasa.djolic@gmail.com> (https://www.linkedin.com/in/sasadjolic/)" ],
 	"contributors"   : [ "Sasa Djolic <sasa.djolic@gmail.com> (https://www.linkedin.com/in/sasadjolic/)" ],
-	"bugs"           : { "url": "https://github.com/sasadjolic/http/issues" },
+	"bugs"           : { "url": "https://github.com/sasadjolic/httplib/issues" },
 	"license"        : "MIT",
-	"repository"     : [{ "type": "git", "url": "https://github.com/sasadjolic/http.git" }],
+	"repository"     : [{ "type": "git", "url": "https://github.com/sasadjolic/httplib.git" }],
 	"scripts"        : {
 		"build"      : "node build/build.js",
 		"test"       : "node test/index.js"
