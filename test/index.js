@@ -7,7 +7,7 @@ qunit.options.log.globalSummary = false;
 qunit.run({
 	code: {
 		path: './lib/http.js',
-		namespace: 'HTTP'
+		namespace: 'http'
 	},
 	tests: [
 		'http.test.js'
