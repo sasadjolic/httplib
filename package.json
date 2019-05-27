@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "fs-extra": ">= 0.0.4",
-    "node-static": "0.5.x",
+    "node-static": "0.7.x",
     "qunit": "^0.4.0",
     "seq": "0.3.x"
   },
