@@ -39,7 +39,7 @@
   "devDependencies": {
     "fs-extra": ">= 0.0.4",
     "node-static": "0.5.x",
-    "qunit": "^0.4.0",
+    "qunit": "^2.11.2",
     "seq": "0.3.x"
   },
   "dependencies": {
